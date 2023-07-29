@@ -1,6 +1,6 @@
 {
 	"default": {
-		"dlt": {
+		"automotive-dlt": {
 			"baseline": "2.8.19",
 			"port-version": 0
 		}
