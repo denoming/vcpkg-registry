@@ -11,8 +11,17 @@
       "name": "vcpkg-cmake-config",
       "host": true
     },
+    "automotive-dlt",
     {
       "name": "boost-core",
+      "version>=": "1.81.0"
+    },
+    {
+      "name": "boost-asio",
+      "version>=": "1.81.0"
+    },
+    {
+      "name": "boost-beast",
       "version>=": "1.81.0"
     },
     {
@@ -23,8 +32,7 @@
       "name": "boost-url",
       "version>=": "1.81.0"
     },
-    "spdlog",
     "date",
-    "automotive-dlt"
+    "spdlog"
   ]
 }
