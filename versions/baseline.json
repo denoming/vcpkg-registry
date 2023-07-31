@@ -3,6 +3,10 @@
     "automotive-dlt": {
       "baseline": "2.8.19",
       "port-version": 0
+    },
+    "jarvisto": {
+      "baseline": "0.2.1",
+      "port-version": 0
     }
   }
 }

@@ -1,0 +1,30 @@
+{
+  "name": "jarvisto",
+  "version-string": "0.2.1",
+  "description": "The basic building blocks library.",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    },
+    {
+      "name": "boost-core",
+      "version>=": "1.81.0"
+    },
+    {
+      "name": "boost-program-options",
+      "version>=": "1.81.0"
+    },
+    {
+      "name": "boost-url",
+      "version>=": "1.81.0"
+    },
+    "spdlog",
+    "date",
+    "automotive-dlt"
+  ]
+}
