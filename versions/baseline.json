@@ -11,6 +11,10 @@
     "sdbus-cpp": {
       "baseline": "1.2.0",
       "port-version": 0
+    },
+    "mosquitto": {
+      "baseline": "2.0.18",
+      "port-version": 0
     }
   }
 }
