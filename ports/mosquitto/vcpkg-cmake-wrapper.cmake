@@ -43,10 +43,6 @@ set_target_properties(mosquitto::mosquitto PROPERTIES
     INTERFACE_INCLUDE_DIRECTORIES ${MOSQUITTO_INCLUDE_DIR}
     IMPORTED_LINK_INTERFACE_LANGUAGES "C")
 
-set_target_properties(mosquitto::mosquitto PROPERTIES
-    IMPORTED_LINK_INTERFACE_LANGUAGES "C"
-    IMPORTED_LOCATION "${MOSQUITTO_LIBRARIES}")
-
 if(MOSQUITTO_LIBRARY_DEBUG)
     set_property(TARGET mosquitto::mosquitto APPEND PROPERTY
         IMPORTED_CONFIGURATIONS DEBUG)
@@ -66,10 +62,6 @@ add_library(mosquitto::mosquittopp UNKNOWN IMPORTED)
 set_target_properties(mosquitto::mosquittopp PROPERTIES
     INTERFACE_INCLUDE_DIRECTORIES ${MOSQUITTO_INCLUDE_DIR}
     IMPORTED_LINK_INTERFACE_LANGUAGES "CXX")
-
-set_target_properties(mosquitto::mosquittopp PROPERTIES
-    IMPORTED_LINK_INTERFACE_LANGUAGES "CXX"
-    IMPORTED_LOCATION "${MOSQUITTOPP_LIBRARIES}")
 
 if(MOSQUITTOPP_LIBRARY_DEBUG)
     set_property(TARGET mosquitto::mosquittopp APPEND PROPERTY
