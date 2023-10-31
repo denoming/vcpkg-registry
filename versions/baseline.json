@@ -14,7 +14,7 @@
     },
     "mosquitto": {
       "baseline": "2.0.18",
-      "port-version": 0
+      "port-version": 1
     },
     "libconfig": {
       "baseline": "1.7.3",
