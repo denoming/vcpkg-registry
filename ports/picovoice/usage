@@ -1,0 +1,4 @@
+The package picovoice provides CMake targets:
+
+    find_package(picovoice REQUIRED)
+    target_link_libraries(main PRIVATE picovoice::picovoice)

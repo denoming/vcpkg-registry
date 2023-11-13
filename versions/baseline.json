@@ -19,6 +19,10 @@
     "libconfig": {
       "baseline": "1.7.3",
       "port-version": 0
+    },
+    "picovoice": {
+      "baseline": "3.0.0",
+      "port-version": 0
     }
   }
 }
