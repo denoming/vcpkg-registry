@@ -1,4 +1,4 @@
-The package picovoice (linux) provides CMake targets:
+The package picovoice (linux specific) provides CMake targets:
 
-    find_package(picovoice REQUIRED)
+    find_package(pv-linux REQUIRED)
     target_link_libraries(main PRIVATE picovoice::picovoice)

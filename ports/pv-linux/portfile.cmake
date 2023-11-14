@@ -9,9 +9,9 @@ vcpkg_extract_source_archive(SOURCE_PATH
 )
 
 file(INSTALL "${SOURCE_PATH}/include/picovoice.h"
-     DESTINATION "${CURRENT_PACKAGES_DIR}/include/${PORT}")
+     DESTINATION "${CURRENT_PACKAGES_DIR}/include/picovoice")
 file(INSTALL "${SOURCE_PATH}/include/pv_rhino.h"
-     DESTINATION "${CURRENT_PACKAGES_DIR}/include/${PORT}")
+     DESTINATION "${CURRENT_PACKAGES_DIR}/include/picovoice")
 
 if (VCPKG_TARGET_IS_LINUX)
     file(INSTALL "${SOURCE_PATH}/lib/linux/x86_64/libpv_rhino.so"
@@ -26,8 +26,8 @@ else()
 endif()
 
 file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/vcpkg-cmake-wrapper.cmake"
-     DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}")
+     DESTINATION "${CURRENT_PACKAGES_DIR}/share/picovoice")
 file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/usage"
-     DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}")
+     DESTINATION "${CURRENT_PACKAGES_DIR}/share/picovoice")
 file(INSTALL "${SOURCE_PATH}/LICENSE"
-     DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright)
+     DESTINATION "${CURRENT_PACKAGES_DIR}/share/picovoice" RENAME copyright)

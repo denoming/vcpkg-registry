@@ -8,6 +8,11 @@ find_library(PICOVOICE_LIBRARY pv_rhino
     REQUIRED
 )
 
+find_package_handle_standard_args(picovoice
+    REQUIRED_VARS PICOVOICE_INCLUDE_DIR
+                  PICOVOICE_LIBRARY 
+)
+
 mark_as_advanced(
     PICOVOICE_INCLUDE_DIR
     PICOVOICE_LIBRARY)
