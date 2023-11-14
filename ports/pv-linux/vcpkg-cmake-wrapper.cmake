@@ -1,12 +1,11 @@
 include(FindPackageHandleStandardArgs)
 
-find_path(PICOVOICE_INCLUDE_DIR picovoice.h)
-
-find_library(PICOVOICE_LIBRARY
-    NAMES pv_rhino
-    NAMES_PER_DIR PATH_SUFFIXES lib
-    PATHS "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}"
-    NO_DEFAULT_PATH REQUIRED
+find_path(PICOVOICE_INCLUDE_DIR picovoice.h
+    PATH_SUFFIXES picovoice
+    REQUIRED
+)
+find_library(PICOVOICE_LIBRARY pv_rhino
+    REQUIRED
 )
 
 mark_as_advanced(

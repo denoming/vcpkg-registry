@@ -1,6 +1,6 @@
 vcpkg_download_distfile(ARCHIVE
     URLS "https://github.com/Picovoice/rhino/archive/refs/tags/v3.0.tar.gz"
-    FILENAME "v3.0.tar.gz"
+    FILENAME "pv.v3.0.tar.gz"
     SHA512 b0793659c16dc3c38d83ca654c2ec5e23445234055f6191bdd9ceb8c0c868069091ec2605c8df0e6e64d77bb7abbed8cc7c4e660cee14cacebccdec4a942276f
 )
 
@@ -21,7 +21,7 @@ if (VCPKG_TARGET_IS_LINUX)
              DESTINATION "${CURRENT_PACKAGES_DIR}/debug/lib")        
     endif()
 else()
-    message(FATAL_ERROR "Current target operation system is not supported")
+    message(FATAL_ERROR "Target operation system is not supported")
     set(VCPKG_POLICY_EMPTY_PACKAGE enabled)
 endif()
 

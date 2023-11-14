@@ -1,5 +1,5 @@
 {
-  "name": "picovoice",
+  "name": "pv-linux",
   "version": "3.0.0",
   "homepage": "https://picovoice.ai/",
   "dependencies": [
