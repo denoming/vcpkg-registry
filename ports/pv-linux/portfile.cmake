@@ -15,19 +15,24 @@ file(INSTALL "${SOURCE_PATH}/include/pv_rhino.h"
 
 if (VCPKG_TARGET_IS_LINUX)
     file(INSTALL "${SOURCE_PATH}/lib/linux/x86_64/libpv_rhino.so"
-         DESTINATION "${CURRENT_PACKAGES_DIR}/lib")
+         DESTINATION "${CURRENT_PACKAGES_DIR}/lib/${PORT}")
     if (NOT VCPKG_BUILD_TYPE)
         file(INSTALL "${SOURCE_PATH}/lib/linux/x86_64/libpv_rhino.so"
-             DESTINATION "${CURRENT_PACKAGES_DIR}/debug/lib")        
+             DESTINATION "${CURRENT_PACKAGES_DIR}/debug/lib/${PORT}")        
     endif()
 else()
     message(FATAL_ERROR "Target operation system is not supported")
     set(VCPKG_POLICY_EMPTY_PACKAGE enabled)
 endif()
 
+file(INSTALL "${SOURCE_PATH}/lib/common"
+     DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}")
+file(INSTALL "${SOURCE_PATH}/resources/contexts/linux/"
+     DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}/contexts")
+
 file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/vcpkg-cmake-wrapper.cmake"
-     DESTINATION "${CURRENT_PACKAGES_DIR}/share/picovoice")
+     DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}")
 file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/usage"
-     DESTINATION "${CURRENT_PACKAGES_DIR}/share/picovoice")
+     DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}")
 file(INSTALL "${SOURCE_PATH}/LICENSE"
-     DESTINATION "${CURRENT_PACKAGES_DIR}/share/picovoice" RENAME copyright)
+     DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright)
