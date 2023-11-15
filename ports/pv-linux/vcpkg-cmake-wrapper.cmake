@@ -12,7 +12,7 @@ find_package_handle_standard_args(picovoice
                   PV_LIBRARY)
 
 set(PV_TARGET picovoice::picovoice)
-add_library(${PV_TARGET} UNKNOWN IMPORTED)
+add_library(${PV_TARGET} SHARED IMPORTED)
 set_target_properties(${PV_TARGET} PROPERTIES
     INTERFACE_INCLUDE_DIRECTORIES ${PV_INCLUDE_DIR}
     IMPORTED_LINK_INTERFACE_LANGUAGES "C"
@@ -49,7 +49,7 @@ set_property(TARGET ${PV_TARGET}
 set_property(TARGET ${PV_TARGET}
     PROPERTY PV_LANGUAGE_MODEL_VN "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/share/pv-linux/common/rhino_params_vn.pv")
 set_property(TARGET ${PV_TARGET}
-    PROPERTY PV_LANGUAGE_MODEL_ZH "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/share/pv-linux/common/rhino_params_zn.pv")
+    PROPERTY PV_LANGUAGE_MODEL_ZN "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/share/pv-linux/common/rhino_params_zn.pv")
 
 set_property(TARGET ${PV_TARGET}
     PROPERTY PV_CONTEXT_ALARM "${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/share/pv-linux/contexts/alarm_linux.rhn")
