@@ -18,7 +18,7 @@
     },
     "libconfig": {
       "baseline": "1.7.3",
-      "port-version": 0
+      "port-version": 1
     },
     "pv-linux": {
       "baseline": "3.0.0",

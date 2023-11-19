@@ -6,17 +6,19 @@ vcpkg_from_github(
     HEAD_REF master
 )
 
-vcpkg_cmake_configure(
-  SOURCE_PATH "${SOURCE_PATH}"
-  OPTIONS
-      -DBUILD_EXAMPLES=OFF
-      -DBUILD_TESTS=OFF
+vcpkg_configure_make(
+    SOURCE_PATH "${SOURCE_PATH}"
+    AUTOCONFIG
 )
-vcpkg_cmake_install()
-vcpkg_copy_pdbs()
 
-file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
-vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/libconfig)
+vcpkg_install_make()
+vcpkg_copy_pdbs()
+vcpkg_fixup_pkgconfig()
+
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/lib/cmake"
+                    "${CURRENT_PACKAGES_DIR}/debug/lib/cmake"
+                    "${CURRENT_PACKAGES_DIR}/debug/share"
+                    "${CURRENT_PACKAGES_DIR}/debug/include")
 
 foreach(FILE "${CURRENT_PACKAGES_DIR}/include/libconfig.h++" "${CURRENT_PACKAGES_DIR}/include/libconfig.h")
   file(READ ${FILE} _contents)
