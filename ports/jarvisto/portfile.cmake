@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO karz0n/jarvisto
-    REF v0.3.3
-    SHA512 e63f6cbdd4bf1d592e00e24d683b02baf0f23abbba3d568ea5d57ee6c10f96b6815b453c35d6e7436024350b29e17b5b3a0c2cd2a82aa00dd07b1f2c8116b0dc
+    REPO denoming/jarvisto
+    REF v0.3.4
+    SHA512 c61c448c7a786ceda3c6f31938157ea892d6bd00906395051a20938441879fc4ffb642f10e37dd08b8102737a72aca117d3c4e347cdfdb4fb414ee5094ba700b
     HEAD_REF main
 )
 
