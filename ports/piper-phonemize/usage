@@ -1,0 +1,5 @@
+The package piper-phonemize provides CMake targets:
+
+  find_package(piper-phonemize REQUIRED)
+  add_executable(Sample sample.cpp)
+  target_link_libraries(bar PRIVATE Piper::Phonemize)
