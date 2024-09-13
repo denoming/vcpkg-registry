@@ -1,6 +1,7 @@
 {
   "name": "piper-phonemize",
   "version-string": "1.2.0",
+  "port-version": 1,
   "description": "C++ library for converting text to phonemes",
   "dependencies": [
     {
