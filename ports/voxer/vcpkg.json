@@ -1,0 +1,20 @@
+{
+  "name": "voxer",
+  "version-string": "0.2.0",
+  "description": "Library for offline text to audio synthesizing",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    },
+    "fmt",
+    "spdlog",
+    "nlohmann-json",
+    "piper-phonemize",
+    "utfcpp"
+  ]
+}

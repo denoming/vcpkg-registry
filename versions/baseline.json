@@ -27,6 +27,9 @@
     "piper-phonemize": {
       "baseline": "1.2.0",
       "port-version": 1
+    },
+    "voxer": {
+      "baseline": "0.2.0"
     }
   }
 }
