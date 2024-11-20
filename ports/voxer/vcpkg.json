@@ -1,6 +1,6 @@
 {
   "name": "voxer",
-  "version-string": "0.2.2",
+  "version-string": "0.2.3",
   "description": "Library for offline text to audio synthesizing",
   "dependencies": [
     {
@@ -15,6 +15,10 @@
     "spdlog",
     "nlohmann-json",
     "utfcpp",
-    "uni-algo"
+    "uni-algo",
+    {
+      "name": "libsndfile",
+      "default-features": false
+    }
   ]
 }
