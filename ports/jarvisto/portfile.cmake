@@ -2,7 +2,7 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO denoming/jarvisto
     REF v0.3.5
-    SHA512 63d77a8ebf83d66f8ee69a22f275a6c00a7119f1d0bcc38c73689f1d9389019ed078ba63149b72ab124d9b03f094844a2eba30df57fc7c507ea6a8b24e5a8cac
+    SHA512 c99414f0afdf97cd837bba5c66e25def7cc0742d6639b2846659056a99e085e36bccb608747852784c0e5559cf6e7d0d8558b5d5b7ab71b8a138f8036a32f624
     HEAD_REF main
 )
 
@@ -10,7 +10,6 @@ vcpkg_configure_cmake(
     SOURCE_PATH "${SOURCE_PATH}"
     PREFER_NINJA
     OPTIONS -DENABLE_TESTS=OFF
-            -DENABLE_DLT=ON
 )
 
 vcpkg_install_cmake()
