@@ -1,15 +1,16 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO denoming/jarvisto
-    REF v0.3.5
-    SHA512 c99414f0afdf97cd837bba5c66e25def7cc0742d6639b2846659056a99e085e36bccb608747852784c0e5559cf6e7d0d8558b5d5b7ab71b8a138f8036a32f624
+    REF v0.3.6
+    SHA512 48c5b93a21f159638232bc25e3d1fbc7b7c782158855a1ad2a5b04c8b2d8f243e4d54750d45c9bfc35a18f774ed3717202dbddf46f96a473d4662cf323e82b13
     HEAD_REF main
 )
 
 vcpkg_configure_cmake(
     SOURCE_PATH "${SOURCE_PATH}"
     PREFER_NINJA
-    OPTIONS -DENABLE_TESTS=OFF
+    OPTIONS -DENABLE_NETWORK_COMPONENT=ON
+            -DENABLE_TESTS=OFF
 )
 
 vcpkg_install_cmake()
@@ -20,3 +21,4 @@ file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 vcpkg_copy_pdbs()
 
 vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE.md")
+file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/usage" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}")

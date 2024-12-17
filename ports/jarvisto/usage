@@ -1,0 +1,4 @@
+The package 'jarvisto' provides CMake targets:
+
+    find_package(Jarvisto CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE Jarvisto::Core Jarvisto::Network)

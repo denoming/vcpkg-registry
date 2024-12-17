@@ -1,8 +1,8 @@
 {
   "name": "jarvisto",
-  "version-string": "0.3.5",
+  "version-string": "0.3.6",
   "description": "The basic building blocks library.",
-  "port-version": 2,
+  "port-version": 0,
   "dependencies": [
     {
       "name": "vcpkg-cmake",
@@ -12,7 +12,8 @@
       "name": "vcpkg-cmake-config",
       "host": true
     },
-    "boost-core",
+    "date",
+    "spdlog",
     {
       "name": "boost-asio",
       "features": [
@@ -20,10 +21,7 @@
       ]
     },
     "boost-beast",
-    "boost-program-options",
     "boost-url",
-    "date",
-    "spdlog",
     "mosquitto",
     "libsigcpp"
   ]

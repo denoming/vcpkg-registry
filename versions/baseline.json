@@ -5,8 +5,8 @@
       "port-version": 0
     },
     "jarvisto": {
-      "baseline": "0.3.5",
-      "port-version": 2
+      "baseline": "0.3.6",
+      "port-version": 0
     },
     "sdbus-cpp": {
       "baseline": "1.2.0",
