@@ -1,6 +1,6 @@
 {
   "name": "jarvisto",
-  "version-string": "0.3.6",
+  "version-string": "0.3.7",
   "description": "The basic building blocks library.",
   "port-version": 0,
   "dependencies": [
@@ -14,12 +14,7 @@
     },
     "date",
     "spdlog",
-    {
-      "name": "boost-asio",
-      "features": [
-        "ssl"
-      ]
-    },
+    "nlohmann-json",
     "boost-beast",
     "boost-url",
     "mosquitto",
