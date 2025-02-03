@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO denoming/voxer
-    REF v0.2.3
-    SHA512 faacfb75942abcc10cc407ee21be879b281492bd9b88a72e0d9ee3746ee80ac4fac3a6a789c69fd41e0d1336c49bf52cf6f819bfeb1af28e593771450044c4b6
+    REF v0.2.4
+    SHA512 f42bec097a725399dbd9c312531424f617d65a58fef3365d62cce2f81a2410bb5cc3a46ec260fe2211e2e99144b27c2bdab3537d16c734d50a12244f6118714c
     HEAD_REF main
 )
 
@@ -17,6 +17,8 @@ vcpkg_configure_cmake(
 vcpkg_install_cmake()
 vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/voxer)
 vcpkg_copy_pdbs()
+
+file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/FindOnnxRuntime.cmake" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}")
 
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")

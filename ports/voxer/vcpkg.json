@@ -1,6 +1,6 @@
 {
   "name": "voxer",
-  "version-string": "0.2.3",
+  "version-string": "0.2.4",
   "description": "Library for offline text to audio synthesizing",
   "dependencies": [
     {
