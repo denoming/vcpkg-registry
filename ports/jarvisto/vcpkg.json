@@ -1,6 +1,6 @@
 {
   "name": "jarvisto",
-  "version-string": "0.3.7",
+  "version-string": "0.3.8",
   "description": "The basic building blocks library.",
   "port-version": 0,
   "dependencies": [
